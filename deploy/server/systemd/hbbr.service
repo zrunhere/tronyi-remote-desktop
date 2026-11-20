@@ -1,0 +1,14 @@
+[Unit]
+Description=RustDesk Relay Server (hbbr) - Tronyi
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/rustdesk
+ExecStart=/opt/rustdesk/hbbr
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
